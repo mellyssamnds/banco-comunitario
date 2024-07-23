@@ -1,73 +1,92 @@
-<p align="center">
-  <a href="http://nestjs.com/" target="blank"><img src="https://nestjs.com/img/logo-small.svg" width="200" alt="Nest Logo" /></a>
-</p>
+# vix bank
+Projeto Integrador desenvolvido durante a Imersão JavaScript da [{reprograma}](https://reprograma.com.br/), que implementa um Banco Comunitário com alguns serviços baseados no documento da **[Rede Brasileira de Bancos Comunitários](https://repositorio.ipea.gov.br/bitstream/11058/4059/1/bmt41_10_Eco_Bancos_41.pdf).**
 
-[circleci-image]: https://img.shields.io/circleci/build/github/nestjs/nest/master?token=abc123def456
-[circleci-url]: https://circleci.com/gh/nestjs/nest
+O curso Imersão Javascript com foco em Back-end é uma iniciativa da {reprograma} desenvolvida com o objetivo de promover uma capacitação focada no aperfeiçoamento de conhecimentos técnicos em JavaScript, especificamente voltados para área de back-end e no desenvolvimento profissional de mulheres com carreira na área de tecnologia, através de uma formação de aperfeiçoamento para aquelas que já possuem conhecimento na linguagem.
 
-  <p align="center">A progressive <a href="http://nodejs.org" target="_blank">Node.js</a> framework for building efficient and scalable server-side applications.</p>
-    <p align="center">
-<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/v/@nestjs/core.svg" alt="NPM Version" /></a>
-<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/l/@nestjs/core.svg" alt="Package License" /></a>
-<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/dm/@nestjs/common.svg" alt="NPM Downloads" /></a>
-<a href="https://circleci.com/gh/nestjs/nest" target="_blank"><img src="https://img.shields.io/circleci/build/github/nestjs/nest/master" alt="CircleCI" /></a>
-<a href="https://coveralls.io/github/nestjs/nest?branch=master" target="_blank"><img src="https://coveralls.io/repos/github/nestjs/nest/badge.svg?branch=master#9" alt="Coverage" /></a>
-<a href="https://discord.gg/G7Qnnhy" target="_blank"><img src="https://img.shields.io/badge/discord-online-brightgreen.svg" alt="Discord"/></a>
-<a href="https://opencollective.com/nest#backer" target="_blank"><img src="https://opencollective.com/nest/backers/badge.svg" alt="Backers on Open Collective" /></a>
-<a href="https://opencollective.com/nest#sponsor" target="_blank"><img src="https://opencollective.com/nest/sponsors/badge.svg" alt="Sponsors on Open Collective" /></a>
-  <a href="https://paypal.me/kamilmysliwiec" target="_blank"><img src="https://img.shields.io/badge/Donate-PayPal-ff3f59.svg"/></a>
-    <a href="https://opencollective.com/nest#sponsor"  target="_blank"><img src="https://img.shields.io/badge/Support%20us-Open%20Collective-41B883.svg" alt="Support us"></a>
-  <a href="https://twitter.com/nestframework" target="_blank"><img src="https://img.shields.io/twitter/follow/nestframework.svg?style=social&label=Follow"></a>
-</p>
-  <!--[![Backers on Open Collective](https://opencollective.com/nest/backers/badge.svg)](https://opencollective.com/nest#backer)
-  [![Sponsors on Open Collective](https://opencollective.com/nest/sponsors/badge.svg)](https://opencollective.com/nest#sponsor)-->
+Esse projeto consiste em implementar um Banco Comunitário chamado *vix bank*. Bancos comunitários são serviços financeiros solidários que visam gerar trabalho e renda, promovendo o desenvolvimento de economias locais, especialmente em territórios de baixa renda, por meio do apoio à economia popular e solidária.
 
-## Description
+Para iniciar a implementação, é necessário criar classes e interfaces apropriadas para representar clientes, suas contas bancárias e implementar métodos para interagir com esses dados, como criar uma nova conta para um cliente, depositar, sacar e transferir dinheiro entre contas.
 
-[Nest](https://github.com/nestjs/nest) framework TypeScript starter repository.
+Neste projeto aprofundaremos o conhecimento na criação e consumo de API’s com a criação de uma API RESTful que implementa um sistema bancário simples, compreendendo os princípios e características de uma arquitetura RESTful e identificando recursos, URIs, métodos HTTP e códigos de status comuns em uma API REST, seguindo as boas práticas de código.
 
-## Installation
+#### Requisitos:
+Cada cliente do banco deve ter as seguintes informações:
+- nome completo;
+- número de identificação (ID);
+- endereço;
+- número de telefone;
+- renda salarial;
+- e-mail;
+
+Ao cliente do banco ser adicionadas as seguintes informações:
+- contas;
+- gerente;
+
+O Gerente deve ter as seguintes informações:
+- nome completo;
+- número de identificação (ID);
+- clientes;
+
+#### Requisitos de negócio:
+- As contas podem ser do tipo Conta Corrente ou Conta Poupança;
+- A partir de R$ 500,00 o cliente pode ter uma Conta Corrente;
+- Para a Conta Corrente, é necessário armazenar o limite do cheque especial (R$ 100,00);
+- Criar classes para representar Cliente e Gerente, incluindo os atributos mencionados no diagrama;
+- Implementar métodos nas classes Cliente e Gerente para abrir, fechar e modificar o tipo de conta;
+- Atualizar a classe Conta para manter uma referência ao cliente associado a ela;
+- Implementar métodos na classe Gerente para adicionar e remover clientes, bem como para abrir, fechar e modificar o tipo de conta para um determinado cliente;
+- Organizar a estrutura do projeto de forma apropriada, seguindo as melhores práticas para uma API RESTful;
+
+## Tecnologias utilizadas
+
+| Ferramenta       | Descrição                                                                                                                          |
+| ---------------- | ---------------------------------------------------------------------------------------------------------------------------------- |        
+| `javascript`     | Linguagem de programação                                                                                                           |
+| `nestjs`         | Framework para construir aplicativos Node.js server-side eficientes e escaláveis
+| `nodejs`         | Ambiente de execução do JavaScript                                                                                                 |
+| `nodemon`        | Dependência que observa as atualizações realizadas nos documentos para rodar o servidor automaticamente                            |
+| `npm`            | Gerenciador de pacotes                                                                                                             |
+| `TypeScript`     | Linguagem de programação superset de JavaScript, que se integra naturalmente ao ecossistema do Node.js                                                                                                                                                      |
+
+<br>
+
+
+## Rotas
+
+#### Client
+
+- **POST**/client/create
+  > cadastra/cria um cliente no servidor
+- **GET**/client/:id
+  > lista os detalhes de um cliente
+- **GET**/client/all
+  > lista todos os clientes cadastrados
+- **PATCH**/client/edit/:id
+  > atualiza determinados campos do cliente
+- **DELETE**/client/:id
+  > apaga um cliente cadastrado no servidor
+- **PUT**/client/:id
+  > atualiza os dados de um cliente no servidor
+
+## Executando o Projeto
 
 ```bash
+# Clone o repositório
+$ git clone https://github.com/mellyssamnds/vix-bank.git
+
+# Entre na pasta do projeto
+$ cd vix-bank
+
+# Mude para a branch que implementa as mudanças
+$ git checkout -b feat/week3-api
+
+# Instale as dependências
 $ npm install
-```
 
-## Running the app
-
-```bash
-# development
-$ npm run start
-
-# watch mode
+# Execute o servidor
 $ npm run start:dev
-
-# production mode
-$ npm run start:prod
 ```
 
-## Test
 
-```bash
-# unit tests
-$ npm run test
-
-# e2e tests
-$ npm run test:e2e
-
-# test coverage
-$ npm run test:cov
-```
-
-## Support
-
-Nest is an MIT-licensed open source project. It can grow thanks to the sponsors and support by the amazing backers. If you'd like to join them, please [read more here](https://docs.nestjs.com/support).
-
-## Stay in touch
-
-- Author - [Kamil Myśliwiec](https://kamilmysliwiec.com)
-- Website - [https://nestjs.com](https://nestjs.com/)
-- Twitter - [@nestframework](https://twitter.com/nestframework)
-
-## License
-
-Nest is [MIT licensed](LICENSE).
+  <p align="center">Projeto Integrador desenvolvido durante a Imersão JavaScript da <a href="https://reprograma.com.br/">{reprograma}</a></p>
+  <p align="center">Feito com 💜 by Mellyssa Stephanny</p>
